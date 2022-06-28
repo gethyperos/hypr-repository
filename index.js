@@ -27,7 +27,7 @@ function enforceCategories() {
   if (validationResult.errors.length > 0) {
     console.error(`Invalid categories.json`)
     console.info(validationResults.ToString())
-    process.exit(1)
+    process.exit(134)
   } else {
     console.success(`categories.json is valid`)
   }
@@ -53,13 +53,11 @@ function generateAppIndex() {
         const foundCategory = categories.filter( c => c.name === category )
         if (foundCategory.length < 1) {
           console.warn(`App "${appManifest.App.name}" has invalid category: ${category}`)
-          process.exit(1)
-        }
+        }validationResult
       })
 
       if (UniqueIds.includes(appManifest.App.id)) {
         console.warn(`Duplicate app id: ${appManifest.App.id} for: ${path}/app.json`)
-        process.exit(1)
       }
 
       UniqueIds.push(appManifest.App.id)
@@ -73,8 +71,7 @@ function generateAppIndex() {
 
       if (validationResult.errors.length > 0) {
         console.error(`Invalid app manifest: ${path}/app.json`)
-        console.log(validationResults.ToString())
-        process.exit(1)
+        console.log(validationResult.ToString())
       } else {
         console.success(`App "${appManifest.App.name}" is valid`)
       }
@@ -82,7 +79,7 @@ function generateAppIndex() {
 
     writeJson( './index.json', Apps.sort() )
   } catch(e) {
-    console.error(`${e}`)
+    process.exit(134)
   }
 }
 
