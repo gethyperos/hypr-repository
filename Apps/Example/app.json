@@ -8,11 +8,14 @@
     "icon": "metadata/icon.png"
   },
   "Services": {
-    "images": {
-      "x86_64": "hello-world:latest",
-      "arm64": "hello-world:latest",
-      "arm": "hello-world:latest"
-    },
-    "container_name": "hello-world"
+    "transmission": {
+      "images": {
+        "x86_64": "hello-world:latest",
+        "arm64": "hello-world:latest",
+        "arm": "hello-world:latest"
+      },
+      "container_name": "hello-world",
+      "restart": "unless-stopped"
+    }
   }
 }
