@@ -1,9 +1,12 @@
-# VoltaOS Repository template
+# HyperOS Repository template
 
-This repository purpose is to serve as template for VoltaOS repositories, including the official one and contains:
+This repository purpose is to serve as template for HyperOS repositories, including the official one and contains:
 - JSON Schemas to help creating new apps
 - Validator with Husky to validate new apps on commit
 - Example app
+
+## Oficial app repository
+[Here](https://github.com/gethyperos/apps)
 
 ## Creating apps for Volta:
 
