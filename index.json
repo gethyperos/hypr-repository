@@ -4,6 +4,6 @@
     "name": "Hello World",
     "description": "A simple app to say hello",
     "directory": "Example",
-    "icon": "icon.png"
+    "icon": "metadata/icon.png"
   }
 ]
