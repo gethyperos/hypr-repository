@@ -121,7 +121,7 @@
               },
               "protocol": {
                 "type": "string",
-                "description": "Protocol (tcp/udp)",
+                "description": "Protocol (tcp/udp) defaults to tcp",
                 "enum": ["tcp", "udp"]
               },
               "description": {
@@ -129,7 +129,7 @@
                 "description": "Port description (Used by front-end)"
               }
             },
-            "required": ["name", "value"],
+            "required": ["host", "container", "description"],
             "minItems": 1
           }
         },
@@ -142,12 +142,12 @@
               "host": {
                 "type": "string",
                 "description": "Path on host",
-                "pattern": "((\\.{2}/{1})+|((\\.{1}/{1})?)|(/{1}))(([a-zA-Z0-9]+/{1})+)([a-zA-Z0-9])+$"
+                "pattern": "((\\.{2}\/{1})+|((\\.{1}\/{1})?)|(\/{1}))([a-zA-Z0-9])+$"
               },
               "container": {
                 "type": "string",
                 "description": "Path on container",
-                "pattern": "((\\.{2}/{1})+|((\\.{1}/{1})?)|(/{1}))(([a-zA-Z0-9]+/{1})+)([a-zA-Z0-9])+$"
+                "pattern": "((\\.{2}\/{1})+|((\\.{1}\/{1})?)|(\/{1}))([a-zA-Z0-9])+$"
               },
               "description": {
                 "type": "string",
