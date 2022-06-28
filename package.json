@@ -9,12 +9,13 @@
   "private": false,
   "dependencies": {
     "consola": "^2.15.3",
-    "husky": "^8.0.1",
     "jsonschema": "^1.4.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "echo \"[Husky] Running repository indexer\" && node index.js"
-    }
+  "scripts": {
+    "prepare": "husky install",
+    "validate": "node ./validate.js"
+  },
+  "devDependencies": {
+    "husky": "^8.0.1"
   }
 }
