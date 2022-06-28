@@ -213,5 +213,5 @@
       }]
     }
   },
-  "required": ["App", "Service"]
+  "required": ["App", "Services"]
 }
